@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  border-radius: 3px;
+  border: solid 1px #d4d4d5
+  ;
+  padding: 30px;
+  display: inline-block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.paddingAll100px{
+  padding: 50px;
+}
+
+.fieldLabel{
+  width:18%;
+  display: inline-flex;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.marginRight50px{
+  margin-right: 50px;
+}
+
+.addContactButton{
+  
+  margin-bottom: 16px;
+ 
+}
