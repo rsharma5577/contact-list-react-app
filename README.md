@@ -2,6 +2,24 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+# Instruction to run the appication
+
+    1. Run "npm install" in root directory
+    2. Run "npm start" to start the application
+    3. The backend API URL is configurable and can be changed at "src/app-config.json" 
+    4. Default API URL - "http://localhost:8080"
+    5. The API enpoints can be are defined in "src/utils/ApiClient.js" 
+
+# Requirement to run this application
+    * node version 14.17.0
+    * npm version   6.14.13
+
+# Information about Authentication (Right now the Authentication is temperory removed)
+    * This application is wrapped with Auth0 IDP authorization and authentication provider
+    * It supports SSO 
+    * please contact rsharma5577@gmail.com (Author) to enable user authentication in this application
+
 ## Available Scripts
 
 In the project directory, you can run:

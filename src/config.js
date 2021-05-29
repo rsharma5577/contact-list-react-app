@@ -1,4 +1,4 @@
-import configJson from "./auth0-config.json";
+import configJson from "./app-config.json";
 
 export function getConfig() {
   // Configure the audience here. By default, it will take whatever is in the config

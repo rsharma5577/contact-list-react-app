@@ -1,5 +1,6 @@
 {
     "domain": "dev-ud0g5615.us.auth0.com",
     "clientId": "cO2eeEXdJNNpJcFNxHSrGLPzJB1dHGk8",
-    "audience": "http://rs.backend.com"
+    "audience": "http://rs.backend.com",
+    "apiURL": "http://localhost:8080"
   }

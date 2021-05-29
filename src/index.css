@@ -22,7 +22,7 @@ code {
   margin-top: 10px;
 }
 
-.paddingAll100px{
+.paddingAll{
   padding: 50px;
 }
 
@@ -33,12 +33,32 @@ code {
   margin-bottom: 30px;
 }
 
+.error{
+  color: red;
+  margin: 16px 0;
+}
+
+.success{
+  color: green;
+  font-weight: bold;
+  margin: 16px 0;
+}
+
+.floatRight {
+  float: right;
+}
+
+.marginBottom{
+  margin-bottom: 16px;
+}
+
 .marginRight50px{
   margin-right: 50px;
 }
 
-.addContactButton{
-  
+.note{
+  color: blue;
+  font-weight: bold;
   margin-bottom: 16px;
  
 }

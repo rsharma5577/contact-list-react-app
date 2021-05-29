@@ -7,11 +7,12 @@ function App() {
   return (
     <div >
       <Routes />
-      
     </div>
   );
 }
 
-export default withAuthenticationRequired(App,{
-  onRedirecting:()=><LoaderSpinner text={'Loading'}/>
-})
+// export default withAuthenticationRequired(App,{
+//   onRedirecting:()=><LoaderSpinner text={'Loading'}/>
+// })
+
+ export default App

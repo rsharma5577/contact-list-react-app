@@ -14,9 +14,9 @@ class Apis {
         }
     }
 
-    static async updateContact(payLoad){
+    static async updateContact(payLoad,id){
         try{
-            const res  = await ApiClient.updateContact(payLoad)
+            const res  = await ApiClient.updateContact(payLoad,id)
             return {response: res.data , error:null}
         }
         catch (err){
@@ -62,3 +62,5 @@ class Apis {
         }
     }
 }
+
+export default Apis
