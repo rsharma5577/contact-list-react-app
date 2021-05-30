@@ -11,7 +11,6 @@ import LoaderSpinner from '../components/loader'
     const[lastName,setLastName] = useState('')
     const[email,setEmail] = useState('')
     const[phoneNumber,setPhoneNumber] = useState('')
-    const[status,setStatus] = useState('')
     const[isLoading,setIsLoading] = useState(false)
     const [error, setError] = useState(false)
     const[isValidAddContactForm,setIsValidAddContactForm] = useState(true)
@@ -20,7 +19,6 @@ import LoaderSpinner from '../components/loader'
     const history = useHistory()
     const {location} =history
     const {state}=location
-    const options = [{text:'Active',value:'Active', key:'Active'},{text:'InActive',value:'InActive',key:'InActive'}]
     
     function onSubmit(){
         
@@ -28,8 +26,7 @@ import LoaderSpinner from '../components/loader'
             firstName :firstName,
             lastName:lastName,
             email:email,
-            phoneNumber:phoneNumber,
-            status:status
+            phoneNumber:phoneNumber
         }
         
         setIsValidUpdateContactForm(validateUpdateContactForm(payLoad))
@@ -62,14 +59,14 @@ import LoaderSpinner from '../components/loader'
     }
 
     function validateAddContactForm(data){
-        if(data.firstName &&  data.lastName && data.email && data.phoneNumber && data.status){
+        if(data.firstName &&  data.lastName && data.email && data.phoneNumber ){
             return true
         } else
             return false
     }
     
     function validateUpdateContactForm(data){
-        if(data.firstName || data.lastName || data.email || data.phoneNumber || data.status){
+        if(data.firstName || data.lastName || data.email || data.phoneNumber ){
             return true
         } else
             return false
@@ -117,18 +114,6 @@ import LoaderSpinner from '../components/loader'
                 <div>
                     <span className="fieldLabel">Phone Number :</span>
                     <span><Input onChange = {(e)=>setPhoneNumber(e.target.value)} /></span>
-                </div>
-
-                <div>
-                    <span className="fieldLabel">Status :</span>
-                    <span>
-                        <Dropdown 
-                        onChange = {(e,data)=>setStatus(data.value)}
-                        placeholder='Set Status'
-                        options={options}
-                        selection
-                        />
-                    </span>
                 </div>
 
                 <div>

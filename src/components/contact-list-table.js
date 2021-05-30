@@ -32,7 +32,8 @@ function ContactListTable(props)  {
         },
         { 
             Header:'Status',
-            accessor:'status'
+            accessor:'status',
+            Cell :(props) => renderStatusCell(props.value)
         },
         { 
             Header:'Action',
@@ -48,13 +49,25 @@ function ContactListTable(props)  {
 
 
     function renderActionCell(cellInfo) {
-        return (
-            <div>
-                <Button onClick={()=>updateContact(cellInfo)} primary>Edit</Button>
-                <span> / </span>
-                <Button onClick={()=>deleteContact(cellInfo)} >Delete</Button>
-            </div>
-        )
+        const obj = data.find(f=> f.id ===cellInfo)
+        if(obj.status === 'Active'){
+            return (
+            
+                <div>
+                    <Button onClick={()=>updateContact(cellInfo)} primary>Edit</Button>
+                    <span> / </span>
+                    <Button onClick={()=>deleteContact(cellInfo)} >Delete</Button>
+                </div>
+            )
+        } else return <span style= {{color:"gray"}}>Not Applicable</span>
+         
+    }
+
+    function renderStatusCell(cellInfo){
+
+        if(cellInfo === "Active"){
+            return <b style ={{color:"green"}} >{cellInfo}</b>
+        } else return <b style ={{color:"red"}} >{cellInfo}</b>
     }
 
     function updateContact(id) {
