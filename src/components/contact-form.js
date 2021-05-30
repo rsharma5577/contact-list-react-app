@@ -98,22 +98,26 @@ import LoaderSpinner from '../components/loader'
                     <span className="fieldLabel">First Name :</span>
                     <span><Input 
                         onChange = {(e)=>setFirstName(e.target.value)}
+                        defaultValue= {state? state.firstName:""}
                     /></span>
                 </div>
 
                 <div>
                     <span className="fieldLabel">Last Name :</span>
-                    <span><Input  onChange = {(e)=>setLastName(e.target.value)} /></span>
+                    <span><Input  onChange = {(e)=>setLastName(e.target.value)} 
+                    defaultValue= {state? state.lastName:""}/></span>
                 </div>
 
                 <div>
                     <span className="fieldLabel">Email :</span>
-                    <span><Input onChange = {(e)=>setEmail(e.target.value)} /></span>
+                    <span><Input onChange = {(e)=>setEmail(e.target.value)}
+                    defaultValue= {state? state.email:""} /></span>
                 </div>
 
                 <div>
                     <span className="fieldLabel">Phone Number :</span>
-                    <span><Input onChange = {(e)=>setPhoneNumber(e.target.value)} /></span>
+                    <span><Input onChange = {(e)=>setPhoneNumber(e.target.value)} 
+                    defaultValue= {state? state.phoneNumber:""}/></span>
                 </div>
 
                 <div>
@@ -129,7 +133,7 @@ import LoaderSpinner from '../components/loader'
             
             {!isValidAddContactForm && !state && <div className="error"> Please enter all the fields. </div>}
 
-            {!isValidUpdateContactForm && state && <div className="error"> Please enter atleast one field. </div>}
+            {!isValidUpdateContactForm && state && <div className="error"> Please modify atleast one field. </div>}
             
             {error && <div className="error"> Something went wrong! Please try later. </div>}
             
